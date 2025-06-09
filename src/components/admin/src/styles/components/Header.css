@@ -1,0 +1,152 @@
+/* src/styles/components/Header.css */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  color: #4285f4;
+}
+
+.nav a.active {
+  color: #4285f4;
+  font-weight: 600;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.email {
+  font-size: 14px;
+  color: #666;
+}
+
+.logout-btn {
+  background-color: transparent;
+  color: #4285f4;
+  border: 1px solid #4285f4;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #4285f4;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .nav {
+    width: 100%;
+  }
+  
+  .nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .nav li {
+    width: 100%;
+  }
+  
+  .nav a {
+    display: block;
+    text-align: center;
+    background-color: #f5f8ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 4px;
+    padding: 10px;
+    color: #4285f4;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  
+  .nav a:hover, .nav a.active {
+    background-color: #e0e7ff;
+  }
+  
+  .nav a.active {
+    background-color: #4285f4;
+    color: white;
+    border-color: #4285f4;
+  }
+  
+  .user-info {
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 5px;
+  }
+  
+  .logout-btn {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-info {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .logout-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
